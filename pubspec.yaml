@@ -1,0 +1,121 @@
+name: answer_me
+description: A new Flutter application.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.0
+  minimal_onboarding: ^1.0.0 # for onboarding screen
+  fluentui_system_icons: ^1.1.92 # microsoft icons
+  dotted_border: ^2.0.0+2 #for dashed or dotted borders
+  textfield_tags: ^1.4.3 #for tags textfields
+  flutter_html: ^3.0.0-alpha.5 # for displaying html content from backend
+  share: ^2.0.4 # used to share the app
+  launch_review: ^3.0.1 # to launch the store for review
+  http: ^0.13.5 # for http requests
+  toast: ^0.3.0 # to display messages
+  shared_preferences: any # to store data locally
+  provider: ^6.0.3 # to cache data
+  image_picker: any # to be able to pick images from phone
+  flutter_staggered_grid_view: ^0.6.2
+  pull_to_refresh: ^2.0.0
+  intl: ^0.17.0
+  scroll_app_bar: ^2.0.0
+  percent_indicator: ^4.2.2
+  url_launcher: any # to launch video urls
+  flutter_local_notifications: any # to push notification when app is in foreground
+  ars_progress_dialog: ^0.1.2 # progress dialog used when processing data
+  scroll_to_index: ^3.0.1 # used to scroll to a list index
+  # admob_flutter: ^1.0.1 # for admob ads
+  path_provider: any 
+  eva_icons_flutter: ^3.1.0 # a package for eva icons
+  shimmer: ^2.0.0 # a loading shimmer for lists
+  modal_bottom_sheet: ^2.1.0 
+  google_fonts: ^3.0.1 # a package having all google fonts
+  universal_platform: ^1.0.0+1 
+  timeago: ^3.3.0 # used to convert a date to time ago
+  flutter_keyboard_visibility: any # used to hide the keyboard in some places
+  google_mobile_ads: ^2.0.1 # for admob ads
+
+  # Firebase
+  firebase_core: ^1.21.1
+  firebase_auth: ^3.7.0
+  firebase_messaging: ^13.0.0
+
+  # Authentication (Google, Facebook, Apple)
+  google_sign_in: ^5.4.1
+  sign_in_with_apple: ^4.1.0
+  # flutter_facebook_login: ^3.0.0
+  flutter_slidable: ^2.0.0
+  flutter_autolink_text: ^1.0.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.10.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Trueno
+      fonts:
+        - asset: assets/fonts/Trueno_Bold.ttf
+          weight: 700
+    - family: OverpassRegular
+      fonts:
+        - asset: assets/fonts/overpass_regular.otf
+  
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
