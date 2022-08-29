@@ -1,4 +1,4 @@
-package com.royhayek.answerme
+package com.srhdp.answerme
 
 import io.flutter.embedding.android.FlutterActivity
 

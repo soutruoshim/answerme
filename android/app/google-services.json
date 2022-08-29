@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "985807133834",
+    "project_id": "answerme-41878",
+    "storage_bucket": "answerme-41878.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985807133834:android:1c0e4b6729c06c8dd16173",
+        "android_client_info": {
+          "package_name": "com.srhdp.answerme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985807133834-q4dj893aqm71jpk92h015eparo6tvb9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeG3zlkPnOQ864p_qESwOLtwd_GBjBcTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985807133834-q4dj893aqm71jpk92h015eparo6tvb9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
