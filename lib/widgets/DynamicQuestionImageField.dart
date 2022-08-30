@@ -47,7 +47,8 @@ class _DynamicImageQuestionFieldState extends State<DynamicImageQuestionField> {
   final picker = ImagePicker();
 
   Future getImage() async {
-    final pickedFile = await ImagePicker.pickImage(source: ImageSource.gallery);
+    final ImagePicker _picker = ImagePicker();
+    final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
 
     setState(() {
       if (pickedFile != null) {

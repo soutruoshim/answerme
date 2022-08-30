@@ -150,8 +150,7 @@ class NotificationService {
   void _showNotification(message) async {
     var androidPlatformChannelSpecifics = new AndroidNotificationDetails(
       'Notification Test',
-      'Notification Test',
-      '',
+      'Notification Test'
     );
     var iOSPlatformChannelSpecifics = new IOSNotificationDetails();
     var platformChannelSpecifics = new NotificationDetails(

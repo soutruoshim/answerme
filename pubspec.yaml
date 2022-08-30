@@ -46,7 +46,7 @@ dependencies:
   scroll_app_bar: ^2.0.0
   percent_indicator: ^4.2.2
   url_launcher: ^6.1.5 # to launch video urls
-  flutter_local_notifications: any # to push notification when app is in foreground
+  flutter_local_notifications: ^9.9.0 # to push notification when app is in foreground
   ars_progress_dialog: ^0.1.2 # progress dialog used when processing data
   scroll_to_index: ^3.0.1 # used to scroll to a list index
   # admob_flutter: ^1.0.1 # for admob ads

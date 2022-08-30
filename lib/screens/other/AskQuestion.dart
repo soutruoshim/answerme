@@ -436,7 +436,8 @@ class _AskQuestionScreenState extends State<AskQuestionScreen> {
   }
 
   Future getImage() async {
-    final pickedFile = await ImagePicker.pickImage(source: ImageSource.gallery);
+    final ImagePicker _picker = ImagePicker();
+    final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
 
     setState(() {
       if (pickedFile != null) {
