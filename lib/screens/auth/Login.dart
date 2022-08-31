@@ -12,6 +12,7 @@ import 'package:answer_me/widgets/CustomTextField.dart';
 import 'package:answer_me/widgets/DefaultButton.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:toast/toast.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = 'login_screen';
@@ -55,6 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ToastContext().init(context);
     ThemeProvider theme = Provider.of<ThemeProvider>(context, listen: false);
     return Scaffold(
       appBar: _appBar(theme),

@@ -42,6 +42,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             .then((user) {
           Navigator.pop(context);
           if (user != null) {
+            //print(user.email);
             Navigator.pop(context);
           }
         });
@@ -51,6 +52,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           //context,
           duration: 2,
         );
+
       }
     }
   }
@@ -64,6 +66,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ToastContext().init(context);
     return Scaffold(
       appBar: _appBar(context),
       body: _body(context),

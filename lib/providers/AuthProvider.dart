@@ -90,23 +90,31 @@ class AuthProvider with ChangeNotifier {
     User user = await ApiRepository.loginUser(context,
         username: username, password: password);
     if (user != null) {
-      if (user.emailVerifiedAt != null) {
-        // await prefs.setLoggedIn(true);
-        await prefs.setPassword(password);
-        await prefs.setUser(user);
-        _firebaseMessaging.getToken().then((token) async {
-          ApiRepository.setDeviceToken(user.id, token);
-        });
-        _user = user;
+      // if (user.emailVerifiedAt != null) {
+      //   // await prefs.setLoggedIn(true);
+      //   await prefs.setPassword(password);
+      //   await prefs.setUser(user);
+      //   _firebaseMessaging.getToken().then((token) async {
+      //     ApiRepository.setDeviceToken(user.id, token);
+      //   });
+      //   _user = user;
+      //
+      //   notifyListeners();
+      // } else {
+      //   Toast.show(
+      //     'Please check your inbox and verify your email.',
+      //     duration: 2,
+      //   );
+      //   return null;
+      // }
+      await prefs.setPassword(password);
+      await prefs.setUser(user);
+      _firebaseMessaging.getToken().then((token) async {
+        ApiRepository.setDeviceToken(user.id, token);
+      });
+      _user = user;
 
-        notifyListeners();
-      } else {
-        Toast.show(
-          'Please check your inbox and verify your email.',
-          duration: 2,
-        );
-        return null;
-      }
+      notifyListeners();
     } else {
       Navigator.push(
         context,

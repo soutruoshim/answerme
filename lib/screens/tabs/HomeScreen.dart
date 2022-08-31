@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen>
         _checkIfDataExists(getEndpoint(_selectedIndex)).then((exist) async {
           if (!exist) await _fetchData(getEndpoint(_selectedIndex));
         });
-        // print("Selected Index: " + _tabController.index.toString());
+         print("Selected Index: " + _tabController.index.toString());
       } else {
         // print(
         //     "tab is animating. from active (getting the index) to inactive(getting the index) ");
@@ -163,6 +163,7 @@ class _HomeScreenState extends State<HomeScreen>
   }
 
   Future<bool> _checkIfDataExists(String endpoint) async {
+
     switch (endpoint) {
       case 'recentQuestions':
         if (appProvider.recentQuestions.isNotEmpty) {
@@ -234,35 +235,7 @@ class _HomeScreenState extends State<HomeScreen>
     setState(() {});
   }
 
-  void _onRefresh(String tab) async {
-    setState(() {
-      _isLoading = true;
-    });
-    _questions = [];
-    _page = 1;
-    _shouldStopRequests = false;
-    _waitForNextRequest = false;
-    switch (tab) {
-      case 'RECENT':
-        await _getQuestions('recentQuestions');
-        break;
-      case 'MOST ANSWERED':
-        await _getQuestions('mostAnsweredQuestions');
-        break;
-      case 'MOST VISITED':
-        await _getQuestions('mostVisitedQuestions');
-        break;
-      case 'MOST VOTED':
-        await _getQuestions('mostVotedQuestions');
-        break;
-      case 'NO ANSWERS':
-        await _getQuestions('noAnsweredQuestions');
-        break;
-      default:
-    }
-    _refreshController.refreshCompleted();
-    _isLoading = false;
-  }
+
 
   void _onLoading(String endpoint) async {
     await _getQuestions(endpoint);
@@ -294,6 +267,8 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   Widget build(BuildContext context) {
     ThemeProvider theme = Provider.of<ThemeProvider>(context, listen: false);
+    _refreshController =
+        RefreshController(initialRefresh: false);
     return Scaffold(
       backgroundColor:
           theme.isDarkTheme() ? Colors.black54 : Colors.grey.shade200,
@@ -419,6 +394,36 @@ class _HomeScreenState extends State<HomeScreen>
         }
       },
     );
+  }
+
+  void _onRefresh(String tab) async {
+    setState(() {
+      _isLoading = true;
+    });
+    _questions = [];
+    _page = 1;
+    _shouldStopRequests = false;
+    _waitForNextRequest = false;
+    switch (tab) {
+      case 'RECENT':
+        await _getQuestions('recentQuestions');
+        break;
+      case 'MOST ANSWERED':
+        await _getQuestions('mostAnsweredQuestions');
+        break;
+      case 'MOST VISITED':
+        await _getQuestions('mostVisitedQuestions');
+        break;
+      case 'MOST VOTED':
+        await _getQuestions('mostVotedQuestions');
+        break;
+      case 'NO ANSWERS':
+        await _getQuestions('noAnsweredQuestions');
+        break;
+      default:
+    }
+    _refreshController.refreshCompleted();
+    _isLoading = false;
   }
 
   Widget _recentQuestions(String endpoint) {

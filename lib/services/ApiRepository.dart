@@ -35,17 +35,21 @@ class ApiRepository {
 
   static Future<User> registerUser(BuildContext context, String username,
       String email, String password) async {
-    Map<String, dynamic> data = {
-      "username": username,
-      "email": email,
-      "password": password,
-    };
+      Map<String, dynamic> data = {
+        "username": username,
+        "email": email,
+        "password": password,
+      };
+      //print(data);
     http.Response response =
         await RequestHelper.post(context, endpoint: '/users', data: data);
     if (response != null) {
+      print(response);
       if (201 == response.statusCode) {
         final parsed = json.decode(response.body);
+
         User user = User.fromJson(parsed);
+        //print(user.email);
         return user;
       } else {
         return null;

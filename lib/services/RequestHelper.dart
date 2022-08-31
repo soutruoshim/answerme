@@ -21,10 +21,12 @@ class RequestHelper {
       {String endpoint, Map data}) async {
     http.Response response;
     try {
-      response = await http.post(Uri.parse(API + endpoint),
-          headers: headers, body: data);
+      print(API + endpoint);
+      response = await http.post(Uri.parse(API + endpoint),headers: headers,
+          body: data);
 
-      print(response.body);
+      //print(response.statusCode);
+
       if (201 == response.statusCode) {
         final parsed = json.decode(response.body);
         if (parsed['message'] != null)

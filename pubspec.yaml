@@ -35,7 +35,7 @@ dependencies:
   flutter_html: ^3.0.0-alpha.5 # for displaying html content from backend
   share: ^2.0.4 # used to share the app
   launch_review: ^3.0.1 # to launch the store for review
-  http: ^0.13.5 # for http requests
+  http: ^0.13.1 # for http requests
   toast: ^0.3.0 # to display messages
   shared_preferences: any # to store data locally
   provider: ^6.0.3 # to cache data
