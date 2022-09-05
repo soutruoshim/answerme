@@ -90,19 +90,19 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                   },
                 ),
         ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Container(
-            width: double.infinity,
-            height: myBanner.size.height.toDouble(),
-            color: Theme.of(context).cardColor,
-            alignment: Alignment.center,
-            child: AdWidget(ad: myBanner),
-            margin: EdgeInsets.only(
-              bottom: SizeConfig.blockSizeVertical * 1,
-            ),
-          ),
-        ),
+        // Align(
+        //   alignment: Alignment.bottomCenter,
+        //   child: Container(
+        //     width: double.infinity,
+        //     height: myBanner.size.height.toDouble(),
+        //     color: Theme.of(context).cardColor,
+        //     alignment: Alignment.center,
+        //     child: AdWidget(ad: myBanner),
+        //     margin: EdgeInsets.only(
+        //       bottom: SizeConfig.blockSizeVertical * 1,
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }
