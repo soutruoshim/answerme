@@ -75,6 +75,7 @@ class _TabsScreenState extends State<TabsScreen> {
       currentIndex: _selectedPageIndex,
       showSelectedLabels: false,
       showUnselectedLabels: false,
+      selectedItemColor: theme.isDarkTheme() ? Colors.black38:Theme.of(context).primaryColor,
       unselectedItemColor:
           theme.isDarkTheme() ? Colors.white70 : Colors.black54,
       type: BottomNavigationBarType.fixed,
